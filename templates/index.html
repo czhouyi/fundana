@@ -1,0 +1,24 @@
+{% extends "bbase.html" %}
+
+{% block title %} 首页 {% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+	<div class="container">
+		<h1>欢迎使用金融分析!</h1>
+		<p>分析各种金融数据，给你赚钱.</p>
+		<p><a class="btn btn-primary btn-lg" href="/" role="button">更多 &raquo;</a>
+		</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h2>基金持仓</h2>
+			<p>分析你现有的基金持仓情况，来决定其他基金的选择。</p>
+			<p><a class="btn btn-default" href="{% url 'app.hold.views.index' %}" role="button">详情 &raquo;</a>
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

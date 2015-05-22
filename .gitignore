@@ -1,0 +1,10 @@
+*.pyc
+nohup.out
+*/*/migrations/
+.idea/
+*/*/__pycache__/
+*/__pycache__/
+startup.sh
+migrations
+run.sh
+.project
