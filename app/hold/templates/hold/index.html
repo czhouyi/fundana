@@ -20,7 +20,7 @@
 				<tbody>
 					{% for fund in funds %}
 					<tr>
-						<td>{{fund.code}}</td>
+						<td><a href="http://www.howbuy.com/fund/{{fund.code}}/" target="_blank">{{fund.code}}</a></td>
 						<td>{{fund.name}}</td>
 						<td>{{fund.rate}}%</td>
 						<td>{{fund.amount}}</td>
