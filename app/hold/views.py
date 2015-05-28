@@ -36,7 +36,7 @@ def stocker():
 	rl = {}
 	for hold in holds:
 		k = (hold.stock.name, hold.stock.code)
-		v = round(float(hold.fund.amount*hold.fund.rate*hold.rate)/10000.0, 2)
+		v = round(float(hold.fund.amount*hold.rate)/100.0, 2)
 		if rl.get(k):
 			rl[k] = round(rl[k] + v, 2)
 		else:
