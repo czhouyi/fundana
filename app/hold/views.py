@@ -35,10 +35,11 @@ def stocker():
 	holds = Hold.objects.all()
 	rl = {}
 	for hold in holds:
-		k = hold.stock.name
+		k = (hold.stock.name, hold.stock.code)
 		v = round(float(hold.fund.amount*hold.fund.rate*hold.rate)/10000.0, 2)
 		if rl.get(k):
 			rl[k] = round(rl[k] + v, 2)
 		else:
 			rl[k] = v
-	return sorted(rl.items(), key = lambda rl : rl[1], reverse=True)
+	l = sorted(rl.items(), key = lambda rl : rl[1], reverse=True)
+	return map(lambda x : [x[0][0], x[0][1], x[1]], l)

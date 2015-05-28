@@ -36,13 +36,16 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th>#</th>
 						<th>股票名称</th>
+						<th>股票代码</th>
 						<th>持有金额</th>
 					</tr>
 				</thead>
 				<tbody>
 					{% for se in stocker %}
 					<tr>
+						<td>{{forloop.counter}}</td>
 						{% for s in se %}
 						<td>{{s}}</td>
 						{% endfor %}
