@@ -38,7 +38,7 @@ def stocker():
 		k = hold.stock.name
 		v = round(float(hold.fund.amount*hold.fund.rate*hold.rate)/10000.0, 2)
 		if rl.get(k):
-			rl[k] = rl[k] + v
+			rl[k] = round(rl[k] + v, 2)
 		else:
 			rl[k] = v
-	return sorted(rl.items(), key=lambda rl : rl[1], reverse=True)
+	return sorted(rl.items(), key = lambda rl : rl[1], reverse=True)
